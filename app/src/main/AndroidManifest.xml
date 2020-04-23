@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".tentang_galih_prasetya_widodo"></activity>
+        <activity android:name=".tentang_IrfanNurRohman"></activity>
+        <activity android:name=".tentang_galih_prasetya_widodo" />
         <activity android:name=".tentang_luky_rafi_anuggilarso" />
         <activity android:name=".MainActivity">
             <intent-filter>

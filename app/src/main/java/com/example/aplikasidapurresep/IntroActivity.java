@@ -24,14 +24,14 @@ public class IntroActivity extends AppCompatActivity {
         bt_create_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //signup
+                startActivity(new Intent(IntroActivity.this, SignUpActivity.class));
             }
         });
 
         txt_log_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //login
+                startActivity(new Intent(IntroActivity.this, LoginActivity.class));
             }
         });
     }

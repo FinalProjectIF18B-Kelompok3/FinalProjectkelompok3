@@ -7,10 +7,16 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 
 public class StartActivity extends AppCompatActivity {
 
     Button bt_start_cooking;
+    FirebaseUser firebaseUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,5 +32,25 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(new Intent(StartActivity.this, IntroActivity.class));
             }
         });
+
+
+        //Login dengan Google
+        // cek user sudah pernah login atau belum
+        final GoogleSignInAccount signInAccount = GoogleSignIn.getLastSignedInAccount(this);
+        if (signInAccount != null){
+            startActivity(new Intent(StartActivity.this, MainActivity.class));
+        }
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        //redirect if user is not null
+        if (firebaseUser !=null){
+            startActivity(new Intent(StartActivity.this, MainActivity.class));
+            finish();
+        }
     }
 }

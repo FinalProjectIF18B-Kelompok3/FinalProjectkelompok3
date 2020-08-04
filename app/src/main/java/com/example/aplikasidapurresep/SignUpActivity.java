@@ -150,7 +150,7 @@ public class SignUpActivity extends AppCompatActivity {
                             HashMap<String, Object> hashMap = new HashMap<>();
                             hashMap.put("id", userid);
                             hashMap.put("username", username.toLowerCase());
-                            hashMap.put("image_url", "");
+                            hashMap.put("image_url", "gs://aplikasi-dapur-resep.appspot.com/placeholder.png");
 
                             reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override

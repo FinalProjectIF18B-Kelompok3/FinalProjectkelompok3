@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/start_picture">
+
+        <TextView
+            android:id="@+id/dapur_resep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Dapur Resep"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/deliciously_simple"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dapur_resep"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Deliciously Simple"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/bt_start_cooking"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_background"
+            android:text="Start Cooking"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</LinearLayout>

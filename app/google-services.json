@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "13230024458",
+    "firebase_url": "https://aplikasi-dapur-resep.firebaseio.com",
+    "project_id": "aplikasi-dapur-resep",
+    "storage_bucket": "aplikasi-dapur-resep.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13230024458:android:c32d4f5cf6ca8a2a9cfcf3",
+        "android_client_info": {
+          "package_name": "com.example.aplikasidapurresep"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13230024458-43n5c0itigqdks5d0mmpd0crso3liufi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aplikasidapurresep",
+            "certificate_hash": "c75e772a932668032ae3e91d78e02a8633074524"
+          }
+        },
+        {
+          "client_id": "13230024458-n7h3akdmfn5lblqenak7i4fhk6hdrrgf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCukZjtKJZ2QuM5-DmrNseOcirUgTY2qGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13230024458-oe62q4b7g5733pbum2aujr0hjqm5tdro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

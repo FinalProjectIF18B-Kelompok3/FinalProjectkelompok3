@@ -20,6 +20,8 @@
         <activity android:name=".tentang_galih_prasetya_widodo" />
         <activity android:name=".tentang_luky_rafi_anuggilarso" />
         <activity android:name=".MainActivity" />
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Theme.AppCompat"/>
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -56,6 +56,8 @@ public class AddActivity extends AppCompatActivity {
         receiptIngredients = findViewById(R.id.txt_ingredients);
         receiptTimeCook = findViewById(R.id.txt_timeCook);
         receiptWaysOfMaking = findViewById(R.id.txt_waysOfMaking);
+        btnSelectImage = findViewById(R.id.btnSelectImage);
+        btnPost = findViewById(R.id.btnPost);
 
         storageReference = FirebaseStorage.getInstance().getReference("posts");
 

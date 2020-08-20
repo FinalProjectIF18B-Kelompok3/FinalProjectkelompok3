@@ -118,11 +118,11 @@ public class AddActivity extends AppCompatActivity {
                         HashMap<String , Object> hashMap = new HashMap<>();
                         hashMap.put("postid", postid);
                         hashMap.put("postimage", myUrl);
-                        hashMap.put("Name Receipt", receiptName.getText().toString());
-                        hashMap.put("Description Receipt", receiptDescription.getText().toString());
-                        hashMap.put("Ingredients", receiptIngredients.getText().toString());
-                        hashMap.put("Time Cook", receiptTimeCook.getText().toString());
-                        hashMap.put("Way Of Making", receiptWaysOfMaking.getText().toString());
+                        hashMap.put("name_receipt", receiptName.getText().toString());
+                        hashMap.put("description_receipt", receiptDescription.getText().toString());
+                        hashMap.put("ingredients", receiptIngredients.getText().toString());
+                        hashMap.put("time_cook", receiptTimeCook.getText().toString());
+                        hashMap.put("way_of_making", receiptWaysOfMaking.getText().toString());
                         hashMap.put("publisher", FirebaseAuth.getInstance().getCurrentUser().getUid());
 
                         reference.child(postid).setValue(hashMap);

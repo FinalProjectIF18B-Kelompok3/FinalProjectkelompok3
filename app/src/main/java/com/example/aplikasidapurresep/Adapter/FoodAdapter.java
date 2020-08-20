@@ -13,7 +13,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.aplikasidapurresep.Model.FoodData;
-import com.example.aplikasidapurresep.PostDetail;
 import com.example.aplikasidapurresep.R;
 
 import java.util.List;

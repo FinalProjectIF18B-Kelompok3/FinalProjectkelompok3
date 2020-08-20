@@ -57,20 +57,21 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/button_fav"
+            <ImageButton
+                android:id="@+id/imageBtn_fav"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/nama_masakan"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:text="Add to Fav" />
+                android:text="Add to Fav"
+                android:src="@drawable/ic_save_black"/>
 
             <LinearLayout
                 android:id="@+id/info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/button_fav"
+                android:layout_below="@+id/imageBtn_fav"
                 android:layout_marginHorizontal="10dp"
                 android:orientation="horizontal">
 

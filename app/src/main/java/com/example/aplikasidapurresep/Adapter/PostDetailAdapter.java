@@ -1,7 +1,6 @@
 package com.example.aplikasidapurresep.Adapter;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,12 +8,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.aplikasidapurresep.Fragment.PostDetailFragment;
 import com.example.aplikasidapurresep.Model.Post;
 import com.example.aplikasidapurresep.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,22 +19,23 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.List;
 
-public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
+public class PostDetailAdapter extends RecyclerView.Adapter<PostDetailAdapter.ViewHolder>  {
 
     public Context mContext;
     public List<Post> mPost;
 
     private FirebaseUser firebaseUser;
 
-    public PostAdapter(Context mContext, List<Post> mPost) {
+    public PostDetailAdapter(Context mContext, List<Post> mPost) {
         this.mContext = mContext;
         this.mPost = mPost;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(mContext).inflate(R.layout.recycler_row_item, parent, false);
-        return new PostAdapter.ViewHolder(view);
+        View view = LayoutInflater.from(mContext).inflate(R.layout.post_detail_item, parent, false);
+        return new PostDetailAdapter.ViewHolder(view);
     }
 
     @Override
@@ -50,18 +48,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
                 .into(holder.post_image);
 
         holder.nama_masakan.setText(post.getName_receipt());
+        holder.time_of_cook.setText(post.getWaktu_memasak());
+        holder.description_s.setText(post.getDescription_receipt());
 
-        holder.post_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences.Editor editor = mContext.getSharedPreferences("PREFS", Context.MODE_PRIVATE).edit();
-                editor.putString("postid", post.getPostid());
-                editor.apply();
 
-                ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new PostDetailFragment()).commit();
-            }
-        });
     }
 
     @Override
@@ -72,13 +62,17 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         ImageView post_image;
-        TextView nama_masakan;
+        TextView nama_masakan, time_of_cook, description_s, bahan, langkah;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            post_image = itemView.findViewById(R.id.image);
-            nama_masakan = itemView.findViewById(R.id.Title);
+            post_image = itemView.findViewById(R.id.post_image);
+            nama_masakan = itemView.findViewById(R.id.nama_masakan);
+            time_of_cook = itemView.findViewById(R.id.time_of_cook);
+            description_s = itemView.findViewById(R.id.description_s);
+
 
         }
     }
